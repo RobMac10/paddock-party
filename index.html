@@ -227,7 +227,7 @@ main {
   cursor: zoom-in;
   border-radius: 6px;
   box-shadow: var(--shadow);
-  padding: 0.55rem 0.55rem 0;
+  padding: 0.55rem;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .card button.shot:hover {
@@ -252,20 +252,11 @@ main {
     max-height: 82vh;
   }
 }
-.card figcaption {
-  font-family: Fraunces, Georgia, Palatino, serif;
-  font-style: italic;
-  font-weight: 500;
-  font-size: 1.05rem;
-  color: var(--muted);
-  text-align: center;
-  padding: 0.7rem 0.4rem 0.15rem;
-}
 .video-card .video-wrap {
   background: var(--paper);
   border-radius: 6px;
   box-shadow: var(--shadow);
-  padding: 0.55rem 0.55rem 0;
+  padding: 0.55rem;
 }
 .video-card video {
   background: var(--navy);
@@ -285,15 +276,6 @@ main {
   display: block;
   background: var(--navy);
   border-radius: 2px;
-}
-.video-note {
-  display: block;
-  font-family: "Source Sans 3", "Segoe UI", sans-serif;
-  font-style: italic;
-  font-weight: 400;
-  font-size: 0.92rem;
-  color: var(--muted);
-  margin-top: 0.25rem;
 }
 .play-badge {
   position: absolute;
@@ -348,20 +330,9 @@ main {
 .lb.open { display: flex; }
 .lb img {
   max-width: min(100vw - 2rem, 1400px);
-  max-height: calc(100vh - 5.5rem);
+  max-height: calc(100vh - 2.5rem);
   object-fit: contain;
   box-shadow: 0 10px 40px rgba(0,0,0,0.45);
-}
-.lb-caption {
-  font-family: Fraunces, Georgia, Palatino, serif;
-  font-style: italic;
-  margin: 0.6rem 3.5rem 0.8rem;
-  padding: 0.35rem 0.8rem;
-  text-align: center;
-  color: var(--gold-soft);
-  font-size: 1.05rem;
-  max-width: 36rem;
-  width: calc(100% - 7rem);
 }
 .lb-btn {
   position: absolute;
@@ -390,8 +361,8 @@ body.lb-lock { overflow: hidden; }
 @media (max-width: 719px) {
   .site-header { padding-bottom: 2.6rem; }
   .lb-prev, .lb-next { top: auto; bottom: 0.7rem; transform: none; }
-  .lb img { max-height: calc(100vh - 8rem); }
-  .card button.shot { padding: 0.4rem 0.4rem 0; }
+  .lb img { max-height: calc(100vh - 5.5rem); }
+  .card button.shot { padding: 0.4rem; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -420,22 +391,19 @@ body.lb-lock { overflow: hidden; }
       <header class="section-head"><h2>Arriving</h2></header>
       <div class="gallery">
     <figure class="card wide">
-      <button type="button" class="shot" data-slide="0" aria-label="View: A &#x27;PARKING / CAMPING&#x27; sign on a hay bale, in front of the house">
+      <button type="button" class="shot" data-slide="0" aria-label="A hand-painted PARKING / CAMPING sign with an arrow, on a round hay bale in front of a farmhouse, photographed through a car window">
         <img src="img/01-parking-by-the-house.jpg" alt="A hand-painted PARKING / CAMPING sign with an arrow, on a round hay bale in front of a farmhouse, photographed through a car window" width="1600" height="1200" loading="lazy">
       </button>
-      <figcaption>A &#x27;PARKING / CAMPING&#x27; sign on a hay bale, in front of the house</figcaption>
     </figure>
     <figure class="card wide">
-      <button type="button" class="shot" data-slide="1" aria-label="View: A &#x27;PARKING / CAMPING&#x27; sign, and a line of bales across the paddock">
+      <button type="button" class="shot" data-slide="1" aria-label="A hand-painted PARKING / CAMPING sign on a round hay bale, with a line of bales stretching across a paddock">
         <img src="img/02-parking-across-the-paddock.jpg" alt="A hand-painted PARKING / CAMPING sign on a round hay bale, with a line of bales stretching across a paddock" width="1600" height="1200" loading="lazy">
       </button>
-      <figcaption>A &#x27;PARKING / CAMPING&#x27; sign, and a line of bales across the paddock</figcaption>
     </figure>
     <figure class="card">
-      <button type="button" class="shot" data-slide="2" aria-label="View: The windmill, the tank, and a swag">
+      <button type="button" class="shot" data-slide="2" aria-label="A windmill and water tank in a paddock, with a swag by the fence under a cloudy sky">
         <img src="img/03-windmill.jpg" alt="A windmill and water tank in a paddock, with a swag by the fence under a cloudy sky" width="1200" height="1600" loading="lazy">
       </button>
-      <figcaption>The windmill, the tank, and a swag</figcaption>
     </figure>
       </div>
     </section>
@@ -443,40 +411,34 @@ body.lb-lock { overflow: hidden; }
       <header class="section-head"><h2>In the paddock</h2></header>
       <div class="gallery">
     <figure class="card">
-      <button type="button" class="shot" data-slide="3" aria-label="View: A kick of the ball by the tractor">
+      <button type="button" class="shot" data-slide="3" aria-label="Two children and a ball on dry grass beside a blue tractor and a round hay bale">
         <img src="img/04-tractor.jpg" alt="Two children and a ball on dry grass beside a blue tractor and a round hay bale" width="1200" height="1600" loading="lazy">
       </button>
-      <figcaption>A kick of the ball by the tractor</figcaption>
     </figure>
     <figure class="card wide">
-      <button type="button" class="shot" data-slide="4" aria-label="View: Totem tennis by the truck">
+      <button type="button" class="shot" data-slide="4" aria-label="Two children playing totem tennis on the grass, with a white truck behind them">
         <img src="img/05-totem-tennis-truck.jpg" alt="Two children playing totem tennis on the grass, with a white truck behind them" width="1600" height="1200" loading="lazy">
       </button>
-      <figcaption>Totem tennis by the truck</figcaption>
     </figure>
     <figure class="card wide">
-      <button type="button" class="shot" data-slide="5" aria-label="View: Totem tennis by the tractor">
+      <button type="button" class="shot" data-slide="5" aria-label="Two children playing totem tennis beside a blue tractor and a row of hay bales">
         <img src="img/06-totem-tennis-tractor.jpg" alt="Two children playing totem tennis beside a blue tractor and a row of hay bales" width="1600" height="1200" loading="lazy">
       </button>
-      <figcaption>Totem tennis by the tractor</figcaption>
     </figure>
     <figure class="card wide">
-      <button type="button" class="shot" data-slide="6" aria-label="View: A swing at totem tennis">
+      <button type="button" class="shot" data-slide="6" aria-label="A child swinging at totem tennis beside a blue tractor and hay bales">
         <img src="img/07-totem-tennis-swing.jpg" alt="A child swinging at totem tennis beside a blue tractor and hay bales" width="1600" height="1200" loading="lazy">
       </button>
-      <figcaption>A swing at totem tennis</figcaption>
     </figure>
     <figure class="card wide">
-      <button type="button" class="shot" data-slide="7" aria-label="View: A young man in a checked shirt and a woman in pink">
+      <button type="button" class="shot" data-slide="7" aria-label="A young man in a checked shirt standing with a woman in a pink shirt and a hat, beside a shed">
         <img src="img/08-checked-and-pink.jpg" alt="A young man in a checked shirt standing with a woman in a pink shirt and a hat, beside a shed" width="1600" height="1200" loading="lazy">
       </button>
-      <figcaption>A young man in a checked shirt and a woman in pink</figcaption>
     </figure>
     <figure class="card">
-      <button type="button" class="shot" data-slide="8" aria-label="View: By the old tree">
+      <button type="button" class="shot" data-slide="8" aria-label="A girl in a sheepskin vest standing beside a weathered tree">
         <img src="img/09-by-the-tree.jpg" alt="A girl in a sheepskin vest standing beside a weathered tree" width="1145" height="1600" loading="lazy">
       </button>
-      <figcaption>By the old tree</figcaption>
     </figure>
       </div>
     </section>
@@ -484,16 +446,14 @@ body.lb-lock { overflow: hidden; }
       <header class="section-head"><h2>Up on the bales</h2></header>
       <div class="gallery">
     <figure class="card">
-      <button type="button" class="shot" data-slide="9" aria-label="View: Climbing the bales">
+      <button type="button" class="shot" data-slide="9" aria-label="Three children climbing a row of round hay bales beside a corrugated-iron shed">
         <img src="img/10-climbing-bales.jpg" alt="Three children climbing a row of round hay bales beside a corrugated-iron shed" width="1200" height="1600" loading="lazy">
       </button>
-      <figcaption>Climbing the bales</figcaption>
     </figure>
     <figure class="card wide">
-      <button type="button" class="shot" data-slide="10" aria-label="View: Arms up on the bales">
+      <button type="button" class="shot" data-slide="10" aria-label="Three children standing on round hay bales with their arms raised">
         <img src="img/11-arms-up.jpg" alt="Three children standing on round hay bales with their arms raised" width="1600" height="1200" loading="lazy">
       </button>
-      <figcaption>Arms up on the bales</figcaption>
     </figure>
       </div>
     </section>
@@ -501,28 +461,24 @@ body.lb-lock { overflow: hidden; }
       <header class="section-head"><h2>At sunset</h2></header>
       <div class="gallery">
     <figure class="card wide">
-      <button type="button" class="shot" data-slide="11" aria-label="View: A family at sunset">
+      <button type="button" class="shot" data-slide="11" aria-label="A family selfie at sunset: a man in a white hat, a woman in a black hat, and two children">
         <img src="img/12-family-sunset.jpg" alt="A family selfie at sunset: a man in a white hat, a woman in a black hat, and two children" width="1600" height="1200" loading="lazy">
       </button>
-      <figcaption>A family at sunset</figcaption>
     </figure>
     <figure class="card">
-      <button type="button" class="shot" data-slide="12" aria-label="View: A hug in front of the marquee">
+      <button type="button" class="shot" data-slide="12" aria-label="A girl hugging a boy in front of a white marquee at sunset">
         <img src="img/13-hug-marquee.jpg" alt="A girl hugging a boy in front of a white marquee at sunset" width="1200" height="1600" loading="lazy">
       </button>
-      <figcaption>A hug in front of the marquee</figcaption>
     </figure>
     <figure class="card">
-      <button type="button" class="shot" data-slide="13" aria-label="View: Walking over to the marquee">
+      <button type="button" class="shot" data-slide="13" aria-label="Two children walking toward a white marquee at sunset">
         <img src="img/14-kids-to-marquee.jpg" alt="Two children walking toward a white marquee at sunset" width="1200" height="1600" loading="lazy">
       </button>
-      <figcaption>Walking over to the marquee</figcaption>
     </figure>
     <figure class="card">
-      <button type="button" class="shot" data-slide="14" aria-label="View: Heading to the marquee at sunset">
+      <button type="button" class="shot" data-slide="14" aria-label="Two men walking toward a white marquee at sunset">
         <img src="img/15-heading-to-marquee.jpg" alt="Two men walking toward a white marquee at sunset" width="1200" height="1600" loading="lazy">
       </button>
-      <figcaption>Heading to the marquee at sunset</figcaption>
     </figure>
       </div>
     </section>
@@ -530,10 +486,9 @@ body.lb-lock { overflow: hidden; }
       <header class="section-head"><h2>Around the shed</h2></header>
       <div class="gallery">
     <figure class="card">
-      <button type="button" class="shot" data-slide="15" aria-label="View: A yarn by the baler">
+      <button type="button" class="shot" data-slide="15" aria-label="Three men talking beside wine barrels and a red New Holland baler in a shed">
         <img src="img/16-shed-baler.jpg" alt="Three men talking beside wine barrels and a red New Holland baler in a shed" width="1200" height="1600" loading="lazy">
       </button>
-      <figcaption>A yarn by the baler</figcaption>
     </figure>
       </div>
     </section>
@@ -541,42 +496,36 @@ body.lb-lock { overflow: hidden; }
       <header class="section-head"><h2>Riding the bull</h2></header>
       <div class="gallery">
     <figure class="card wide">
-      <button type="button" class="shot" data-slide="16" aria-label="View: In the arena">
+      <button type="button" class="shot" data-slide="16" aria-label="People standing in an inflatable mechanical bull arena under festoon lights in a shed">
         <img src="img/17-bull-arena.jpg" alt="People standing in an inflatable mechanical bull arena under festoon lights in a shed" width="1600" height="1200" loading="lazy">
       </button>
-      <figcaption>In the arena</figcaption>
     </figure>
     <figure class="card">
-      <button type="button" class="shot" data-slide="17" aria-label="View: Riding the bull">
+      <button type="button" class="shot" data-slide="17" aria-label="A young man in a checked shirt riding an inflatable mechanical bull">
         <img src="img/18-riding-the-bull.jpg" alt="A young man in a checked shirt riding an inflatable mechanical bull" width="1200" height="1600" loading="lazy">
       </button>
-      <figcaption>Riding the bull</figcaption>
     </figure>
     <figure class="card">
-      <button type="button" class="shot" data-slide="18" aria-label="View: Holding on">
+      <button type="button" class="shot" data-slide="18" aria-label="A close view of a young man in a checked shirt riding the mechanical bull">
         <img src="img/19-holding-on.jpg" alt="A close view of a young man in a checked shirt riding the mechanical bull" width="1200" height="1600" loading="lazy">
       </button>
-      <figcaption>Holding on</figcaption>
     </figure>
     <figure class="card">
-      <button type="button" class="shot" data-slide="19" aria-label="View: A go on the bull">
+      <button type="button" class="shot" data-slide="19" aria-label="A man riding the mechanical bull while someone works a yellow control box">
         <img src="img/20-a-go-on-the-bull.jpg" alt="A man riding the mechanical bull while someone works a yellow control box" width="1200" height="1600" loading="lazy">
       </button>
-      <figcaption>A go on the bull</figcaption>
     </figure>
     <figure class="card">
-      <button type="button" class="shot" data-slide="20" aria-label="View: At the controls">
+      <button type="button" class="shot" data-slide="20" aria-label="A man at the mechanical bull while another works the yellow control box">
         <img src="img/21-at-the-controls.jpg" alt="A man at the mechanical bull while another works the yellow control box" width="1200" height="1600" loading="lazy">
       </button>
-      <figcaption>At the controls</figcaption>
     </figure>
     <figure class="card wide video-card">
       <div class="video-wrap">
-        <video controls playsinline muted preload="metadata" poster="img/video-poster.jpg" width="1024" height="576">
+        <video controls playsinline muted preload="metadata" poster="img/video-poster.jpg" width="1024" height="576" aria-label="A video still of the inflatable mechanical bull in the shed">
           <source src="video/party.mp4" type="video/mp4">
         </video>
       </div>
-      <figcaption>From the night</figcaption>
     </figure>
       </div>
     </section>
@@ -584,10 +533,9 @@ body.lb-lock { overflow: hidden; }
       <header class="section-head"><h2>The Best Buckers</h2></header>
       <div class="gallery">
     <figure class="card">
-      <button type="button" class="shot" data-slide="21" aria-label="View: The Best Buckers — 1st Jack 55, 2nd Cameron 49, 3rd Bella 43">
+      <button type="button" class="shot" data-slide="21" aria-label="A whiteboard titled The Best Buckers, listing 1st Jack 55, 2nd Cameron 49, and 3rd Bella 43">
         <img src="img/22-best-buckers.jpg" alt="A whiteboard titled The Best Buckers, listing 1st Jack 55, 2nd Cameron 49, and 3rd Bella 43" width="1200" height="1600" loading="lazy">
       </button>
-      <figcaption>The Best Buckers — 1st Jack 55, 2nd Cameron 49, 3rd Bella 43</figcaption>
     </figure>
       </div>
     </section>
@@ -595,22 +543,19 @@ body.lb-lock { overflow: hidden; }
       <header class="section-head"><h2>Under the marquee</h2></header>
       <div class="gallery">
     <figure class="card wide">
-      <button type="button" class="shot" data-slide="22" aria-label="View: Gathered at the tables">
+      <button type="button" class="shot" data-slide="22" aria-label="People eating and talking at tables under a yellow-lit marquee, with barrels and a line of photos">
         <img src="img/23-under-the-marquee.jpg" alt="People eating and talking at tables under a yellow-lit marquee, with barrels and a line of photos" width="1600" height="1200" loading="lazy">
       </button>
-      <figcaption>Gathered at the tables</figcaption>
     </figure>
     <figure class="card">
-      <button type="button" class="shot" data-slide="23" aria-label="View: A family in the tent">
+      <button type="button" class="shot" data-slide="23" aria-label="Four people standing together for a photograph inside a tent">
         <img src="img/24-family-in-the-tent.jpg" alt="Four people standing together for a photograph inside a tent" width="1200" height="1600" loading="lazy">
       </button>
-      <figcaption>A family in the tent</figcaption>
     </figure>
     <figure class="card">
-      <button type="button" class="shot" data-slide="24" aria-label="View: A woman in a hat and a boy, in the tent">
+      <button type="button" class="shot" data-slide="24" aria-label="A smiling woman in a dark hat beside a boy sitting on a white chair inside a tent">
         <img src="img/25-woman-and-boy-in-the-tent.jpg" alt="A smiling woman in a dark hat beside a boy sitting on a white chair inside a tent" width="1200" height="1600" loading="lazy">
       </button>
-      <figcaption>A woman in a hat and a boy, in the tent</figcaption>
     </figure>
       </div>
     </section>
@@ -618,22 +563,19 @@ body.lb-lock { overflow: hidden; }
       <header class="section-head"><h2>On the dance floor</h2></header>
       <div class="gallery">
     <figure class="card wide">
-      <button type="button" class="shot" data-slide="25" aria-label="View: On the dance floor">
+      <button type="button" class="shot" data-slide="25" aria-label="People dancing in a tent under blue lights, some wearing hats">
         <img src="img/26-dance-floor-blue.jpg" alt="People dancing in a tent under blue lights, some wearing hats" width="1600" height="1200" loading="lazy">
       </button>
-      <figcaption>On the dance floor</figcaption>
     </figure>
     <figure class="card wide">
-      <button type="button" class="shot" data-slide="26" aria-label="View: Under the disco lights">
+      <button type="button" class="shot" data-slide="26" aria-label="People dancing in a tent under coloured lights, with a rainbow of light on the grass">
         <img src="img/27-dance-floor-lights.jpg" alt="People dancing in a tent under coloured lights, with a rainbow of light on the grass" width="1600" height="1200" loading="lazy">
       </button>
-      <figcaption>Under the disco lights</figcaption>
     </figure>
     <figure class="card wide">
-      <button type="button" class="shot" data-slide="27" aria-label="View: Pink light on the dance floor">
+      <button type="button" class="shot" data-slide="27" aria-label="People dancing in a tent under pink and purple lights, arms raised">
         <img src="img/28-dance-floor-pink.jpg" alt="People dancing in a tent under pink and purple lights, arms raised" width="1600" height="1200" loading="lazy">
       </button>
-      <figcaption>Pink light on the dance floor</figcaption>
     </figure>
       </div>
     </section>
@@ -641,64 +583,54 @@ body.lb-lock { overflow: hidden; }
       <header class="section-head"><h2>After dark</h2></header>
       <div class="gallery">
     <figure class="card">
-      <button type="button" class="shot" data-slide="28" aria-label="View: The moon through the clouds">
+      <button type="button" class="shot" data-slide="28" aria-label="A bright moon shining through clouds above the dark silhouette of trees">
         <img src="img/29-moon-through-the-clouds.jpg" alt="A bright moon shining through clouds above the dark silhouette of trees" width="1200" height="1600" loading="lazy">
       </button>
-      <figcaption>The moon through the clouds</figcaption>
     </figure>
     <figure class="card">
-      <button type="button" class="shot" data-slide="29" aria-label="View: Under the moon">
+      <button type="button" class="shot" data-slide="29" aria-label="Three children on hay bales at night under a moonlit cloudy sky, one holding a torch">
         <img src="img/30-under-the-moon.jpg" alt="Three children on hay bales at night under a moonlit cloudy sky, one holding a torch" width="1200" height="1600" loading="lazy">
       </button>
-      <figcaption>Under the moon</figcaption>
     </figure>
     <figure class="card">
-      <button type="button" class="shot" data-slide="30" aria-label="View: A moonbeam over the bales">
+      <button type="button" class="shot" data-slide="30" aria-label="Children on hay bales at night under a bright moon and a gum tree">
         <img src="img/31-moonbeam.jpg" alt="Children on hay bales at night under a bright moon and a gum tree" width="1200" height="1600" loading="lazy">
       </button>
-      <figcaption>A moonbeam over the bales</figcaption>
     </figure>
     <figure class="card">
-      <button type="button" class="shot" data-slide="31" aria-label="View: On the bales by moonlight">
+      <button type="button" class="shot" data-slide="31" aria-label="Three children on round hay bales at night under a moon and a large tree">
         <img src="img/32-on-the-bales-by-moonlight.jpg" alt="Three children on round hay bales at night under a moon and a large tree" width="1200" height="1600" loading="lazy">
       </button>
-      <figcaption>On the bales by moonlight</figcaption>
     </figure>
     <figure class="card">
-      <button type="button" class="shot" data-slide="32" aria-label="View: Across the bales, under the moon">
+      <button type="button" class="shot" data-slide="32" aria-label="Children on hay bales at night under a cloudy moonlit sky and a large tree">
         <img src="img/33-across-the-bales.jpg" alt="Children on hay bales at night under a cloudy moonlit sky and a large tree" width="1200" height="1600" loading="lazy">
       </button>
-      <figcaption>Across the bales, under the moon</figcaption>
     </figure>
     <figure class="card">
-      <button type="button" class="shot" data-slide="33" aria-label="View: Under the gum, after dark">
+      <button type="button" class="shot" data-slide="33" aria-label="Children on a row of hay bales under a large floodlit gum tree at night, with a barrel, stools and a tractor">
         <img src="img/34-under-the-gum.jpg" alt="Children on a row of hay bales under a large floodlit gum tree at night, with a barrel, stools and a tractor" width="1200" height="1600" loading="lazy">
       </button>
-      <figcaption>Under the gum, after dark</figcaption>
     </figure>
     <figure class="card">
-      <button type="button" class="shot" data-slide="34" aria-label="View: On the bales after dark">
+      <button type="button" class="shot" data-slide="34" aria-label="People on a row of round hay bales at night under a floodlit tree, with a barrel and stools in the foreground">
         <img src="img/35-bales-after-dark.jpg" alt="People on a row of round hay bales at night under a floodlit tree, with a barrel and stools in the foreground" width="1200" height="1600" loading="lazy">
       </button>
-      <figcaption>On the bales after dark</figcaption>
     </figure>
     <figure class="card">
-      <button type="button" class="shot" data-slide="35" aria-label="View: The shed at night">
+      <button type="button" class="shot" data-slide="35" aria-label="A corrugated-iron shed lit by a bright floodlight at night, with vehicles in the background">
         <img src="img/36-shed-at-night.jpg" alt="A corrugated-iron shed lit by a bright floodlight at night, with vehicles in the background" width="1200" height="1600" loading="lazy">
       </button>
-      <figcaption>The shed at night</figcaption>
     </figure>
     <figure class="card">
-      <button type="button" class="shot" data-slide="36" aria-label="View: The marquee across the paddock">
+      <button type="button" class="shot" data-slide="36" aria-label="A floodlit paddock at night with a glowing marquee in the distance, hay bales and a large tree in the foreground">
         <img src="img/37-marquee-across-the-paddock.jpg" alt="A floodlit paddock at night with a glowing marquee in the distance, hay bales and a large tree in the foreground" width="1200" height="1600" loading="lazy">
       </button>
-      <figcaption>The marquee across the paddock</figcaption>
     </figure>
     <figure class="card">
-      <button type="button" class="shot" data-slide="37" aria-label="View: A man in a white hat">
+      <button type="button" class="shot" data-slide="37" aria-label="A smiling man in a cream hat and a checked shirt, photographed at night">
         <img src="img/38-man-in-a-white-hat.jpg" alt="A smiling man in a cream hat and a checked shirt, photographed at night" width="1200" height="1600" loading="lazy">
       </button>
-      <figcaption>A man in a white hat</figcaption>
     </figure>
       </div>
     </section>
@@ -706,94 +638,79 @@ body.lb-lock { overflow: hidden; }
       <header class="section-head"><h2>Lights out</h2></header>
       <div class="gallery">
     <figure class="card">
-      <button type="button" class="shot" data-slide="38" aria-label="View: A man in a hat, on a picnic rug">
+      <button type="button" class="shot" data-slide="38" aria-label="A man in a cream cowboy hat and checked shirt lying on a tartan picnic rug on the grass at night, lit by a torch">
         <img src="img/39-picnic-rug.jpg" alt="A man in a cream cowboy hat and checked shirt lying on a tartan picnic rug on the grass at night, lit by a torch" width="1200" height="1600" loading="lazy">
       </button>
-      <figcaption>A man in a hat, on a picnic rug</figcaption>
     </figure>
     <figure class="card">
-      <button type="button" class="shot" data-slide="39" aria-label="View: The open boot, under the moon">
+      <button type="button" class="shot" data-slide="39" aria-label="An open SUV and an open car door at night, under a bright moon and clouds">
         <img src="img/40-suv-under-the-moon.jpg" alt="An open SUV and an open car door at night, under a bright moon and clouds" width="1200" height="1600" loading="lazy">
       </button>
-      <figcaption>The open boot, under the moon</figcaption>
     </figure>
     <figure class="card">
-      <button type="button" class="shot" data-slide="40" aria-label="View: A white wagon, boot open">
+      <button type="button" class="shot" data-slide="40" aria-label="A white station wagon parked on grass at night with its rear door open">
         <img src="img/41-white-wagon.jpg" alt="A white station wagon parked on grass at night with its rear door open" width="1200" height="1600" loading="lazy">
       </button>
-      <figcaption>A white wagon, boot open</figcaption>
     </figure>
     <figure class="card">
-      <button type="button" class="shot" data-slide="41" aria-label="View: Through the wagon window">
+      <button type="button" class="shot" data-slide="41" aria-label="A child lying in the back of a white car at night, looking at a tablet through the side window">
         <img src="img/42-through-the-wagon-window.jpg" alt="A child lying in the back of a white car at night, looking at a tablet through the side window" width="1200" height="1600" loading="lazy">
       </button>
-      <figcaption>Through the wagon window</figcaption>
     </figure>
     <figure class="card">
-      <button type="button" class="shot" data-slide="42" aria-label="View: In the back of the wagon">
+      <button type="button" class="shot" data-slide="42" aria-label="A boy looking out from the open boot of a white wagon at night">
         <img src="img/43-in-the-white-wagon.jpg" alt="A boy looking out from the open boot of a white wagon at night" width="1200" height="1600" loading="lazy">
       </button>
-      <figcaption>In the back of the wagon</figcaption>
     </figure>
     <figure class="card">
-      <button type="button" class="shot" data-slide="43" aria-label="View: Tucked in the wagon">
+      <button type="button" class="shot" data-slide="43" aria-label="A child in the open boot of a wagon at night, in a made-up bed, looking at a tablet">
         <img src="img/44-tucked-in-the-wagon.jpg" alt="A child in the open boot of a wagon at night, in a made-up bed, looking at a tablet" width="1200" height="1600" loading="lazy">
       </button>
-      <figcaption>Tucked in the wagon</figcaption>
     </figure>
     <figure class="card">
-      <button type="button" class="shot" data-slide="44" aria-label="View: In the boot of the blue SUV">
+      <button type="button" class="shot" data-slide="44" aria-label="A child in pyjamas sitting in the open boot of a blue SUV in a paddock at night">
         <img src="img/45-in-the-blue-suv.jpg" alt="A child in pyjamas sitting in the open boot of a blue SUV in a paddock at night" width="1200" height="1600" loading="lazy">
       </button>
-      <figcaption>In the boot of the blue SUV</figcaption>
     </figure>
     <figure class="card">
-      <button type="button" class="shot" data-slide="45" aria-label="View: Peeking from the duvet">
+      <button type="button" class="shot" data-slide="45" aria-label="A child peeking over a duvet in the open boot of a blue SUV at night">
         <img src="img/46-peeking-from-the-duvet.jpg" alt="A child peeking over a duvet in the open boot of a blue SUV at night" width="1200" height="1600" loading="lazy">
       </button>
-      <figcaption>Peeking from the duvet</figcaption>
     </figure>
     <figure class="card">
-      <button type="button" class="shot" data-slide="46" aria-label="View: A peek from the SUV">
+      <button type="button" class="shot" data-slide="46" aria-label="A child peeking around the open boot of a blue SUV at night">
         <img src="img/47-a-peek-from-the-suv.jpg" alt="A child peeking around the open boot of a blue SUV at night" width="1200" height="1600" loading="lazy">
       </button>
-      <figcaption>A peek from the SUV</figcaption>
     </figure>
     <figure class="card">
-      <button type="button" class="shot" data-slide="47" aria-label="View: A bed in the back, under the clouds">
+      <button type="button" class="shot" data-slide="47" aria-label="A child lying in a made-up bed in an open car at night, under a cloudy sky, looking at a tablet">
         <img src="img/48-a-bed-in-the-suv.jpg" alt="A child lying in a made-up bed in an open car at night, under a cloudy sky, looking at a tablet" width="1200" height="1600" loading="lazy">
       </button>
-      <figcaption>A bed in the back, under the clouds</figcaption>
     </figure>
     <figure class="card">
-      <button type="button" class="shot" data-slide="48" aria-label="View: Reading in the back">
+      <button type="button" class="shot" data-slide="48" aria-label="A child sitting up in a bed made in an open car at night, looking at a lit screen, with clouds and stars behind">
         <img src="img/49-reading-in-the-back.jpg" alt="A child sitting up in a bed made in an open car at night, looking at a lit screen, with clouds and stars behind" width="1200" height="1600" loading="lazy">
       </button>
-      <figcaption>Reading in the back</figcaption>
     </figure>
     <figure class="card">
-      <button type="button" class="shot" data-slide="49" aria-label="View: Tucked up together">
+      <button type="button" class="shot" data-slide="49" aria-label="A woman and a child lying in a bed made up in a car at night, the child holding a tablet">
         <img src="img/50-tucked-up-together.jpg" alt="A woman and a child lying in a bed made up in a car at night, the child holding a tablet" width="1200" height="1599" loading="lazy">
       </button>
-      <figcaption>Tucked up together</figcaption>
     </figure>
     <figure class="card">
-      <button type="button" class="shot" data-slide="50" aria-label="View: A story in the dark">
+      <button type="button" class="shot" data-slide="50" aria-label="A child lying in bed in the dark, looking at a lit tablet">
         <img src="img/51-a-story-in-the-dark.jpg" alt="A child lying in bed in the dark, looking at a lit tablet" width="1200" height="1600" loading="lazy">
       </button>
-      <figcaption>A story in the dark</figcaption>
     </figure>
     <figure class="card">
-      <button type="button" class="shot" data-slide="51" aria-label="View: Almost asleep">
+      <button type="button" class="shot" data-slide="51" aria-label="A child in a bed made up in a car, looking at a tablet, with a stuffed toy on the covers">
         <img src="img/52-almost-asleep.jpg" alt="A child in a bed made up in a car, looking at a tablet, with a stuffed toy on the covers" width="1200" height="1600" loading="lazy">
       </button>
-      <figcaption>Almost asleep</figcaption>
     </figure>
     <figure class="card">
-      <button type="button" class="shot" data-slide="52" aria-label="View: Peace signs in the back">
+      <button type="button" class="shot" data-slide="52" aria-label="A child in pyjamas sitting on a bed made up in a car, smiling and holding up two peace signs">
         <img src="img/53-peace-in-the-back.jpg" alt="A child in pyjamas sitting on a bed made up in a car, smiling and holding up two peace signs" width="1200" height="1600" loading="lazy">
       </button>
-      <figcaption>Peace signs in the back</figcaption>
     </figure>
       </div>
     </section>
@@ -802,7 +719,6 @@ body.lb-lock { overflow: hidden; }
 
   <footer class="site-footer">
     <div class="rule" aria-hidden="true"></div>
-    A keepsake of Declan and Kate's paddock party.
   </footer>
 
   <div class="lb" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Photograph">
@@ -810,27 +726,16 @@ body.lb-lock { overflow: hidden; }
     <button class="lb-btn lb-prev" type="button" aria-label="Previous photograph">&#8249;</button>
     <img id="lb-image" alt="">
     <button class="lb-btn lb-next" type="button" aria-label="Next photograph">&#8250;</button>
-    <p class="lb-caption" id="lb-caption"></p>
   </div>
 
   <script>
   (function () {
     const box = document.getElementById("lightbox");
     const img = document.getElementById("lb-image");
-    const cap = document.getElementById("lb-caption");
     const buttons = Array.from(document.querySelectorAll("[data-slide]"));
     const SLIDES = buttons.map(function (btn) {
       const pic = btn.querySelector("img");
-      const figure = btn.closest("figure");
-      const raw = figure ? figure.querySelector("figcaption") : null;
-      let caption = "";
-      if (raw) {
-        caption = Array.from(raw.childNodes).filter(function (n) {
-          return n.nodeType === 3;
-        }).map(function (n) { return n.textContent.trim(); }).join(" ").trim()
-          || raw.textContent.trim();
-      }
-      return { src: pic.getAttribute("src"), alt: pic.getAttribute("alt") || "", caption: caption };
+      return { src: pic.getAttribute("src"), alt: pic.getAttribute("alt") || "" };
     });
     let i = 0;
     let startX = null;
@@ -840,8 +745,7 @@ body.lb-lock { overflow: hidden; }
       i = (n + SLIDES.length) % SLIDES.length;
       const s = SLIDES[i];
       img.src = s.src;
-      img.alt = s.alt || s.caption || "";
-      cap.textContent = s.caption || "";
+      img.alt = s.alt || "";
     }
     function openAt(n) {
       show(n);
