@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Declan &amp; Kate's 18th — Paddock Party</title>
+  <style>
+@font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url('fonts/fraunces-italic-500-latin.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 500 700;
+  font-display: swap;
+  src: url('fonts/fraunces-normal-500-latin.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Source Sans 3';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/sourcesans3-italic-400-latin.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Source Sans 3';
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url('fonts/sourcesans3-normal-400-latin.woff2') format('woff2');
+}
+
+:root {
+  --sky: #152238;
+  --sky-2: #1c2e4a;
+  --navy: #0e1726;
+  --gold: #d4a44a;
+  --gold-soft: #e8c87a;
+  --hay: #f3ead4;
+  --cream: #f7f1e4;
+  --paper: #fffaf1;
+  --ink: #2a2118;
+  --muted: #5c4a32;
+  --rule: #d9c9a4;
+  --shadow: 0 10px 28px rgba(21, 34, 56, 0.14);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: "Source Sans 3", "Segoe UI", "Helvetica Neue", sans-serif;
+  color: var(--ink);
+  background: radial-gradient(1200px 500px at 50% -80px, #efe3c4 0%, var(--cream) 55%);
+  line-height: 1.5;
+  min-height: 100vh;
+}
+img, video { max-width: 100%; height: auto; }
+a { color: inherit; }
+
+.site-header {
+  background:
+    radial-gradient(circle at 88% 18%, rgba(255,255,230,0.14), transparent 28%),
+    linear-gradient(180deg, var(--navy) 0%, var(--sky) 60%, var(--sky-2) 100%);
+  color: var(--cream);
+  text-align: center;
+  padding: 1.4rem 1.25rem 3.25rem;
+  position: relative;
+  overflow: hidden;
+}
+.site-header::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -1px;
+  height: 42px;
+  background: var(--cream);
+  clip-path: ellipse(70% 100% at 50% 100%);
+}
+.moon {
+  position: absolute;
+  top: 1.6rem;
+  right: 8%;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #fff9df, #e8d9a0 70%);
+  box-shadow: 0 0 28px 8px rgba(232, 216, 150, 0.22);
+  opacity: 0.7;
+  pointer-events: none;
+}
+.festoon {
+  position: relative;
+  height: 54px;
+  max-width: 44rem;
+  margin: 0 auto 1.15rem;
+}
+.festoon::before {
+  content: "";
+  position: absolute;
+  left: 3%;
+  right: 3%;
+  top: 10px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #c4a35acc, #e8c87a, #c4a35acc, transparent);
+}
+.festoon i {
+  position: absolute;
+  top: 10px;
+  width: 11px;
+  height: 16px;
+  border-radius: 50% 50% 40% 40%;
+  background: radial-gradient(circle at 35% 30%, #fff8d8, #f0c14b 58%, #c48420);
+  box-shadow: 0 4px 14px 3px rgba(240, 193, 75, 0.45);
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+.festoon i:nth-child(odd) { top: 16px; }
+.festoon i:nth-child(3n) { top: 8px; }
+
+.brand-kicker {
+  font-family: "Source Sans 3", "Segoe UI", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  color: var(--gold-soft);
+  margin: 0 0 0.55rem;
+}
+.brand-title {
+  font-family: Fraunces, Georgia, "Palatino Linotype", Palatino, "Times New Roman", serif;
+  font-weight: 500;
+  font-size: clamp(2.15rem, 7.2vw, 4.35rem);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  margin: 0;
+  color: #f8f1e2;
+  font-synthesis: none;
+}
+.brand-title em {
+  display: block;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--gold-soft);
+  font-size: 0.72em;
+  letter-spacing: 0;
+  margin-top: 0.06em;
+}
+.brand-sub {
+  font-family: Fraunces, Georgia, Palatino, serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.35rem, 3.6vw, 2.05rem);
+  color: var(--gold);
+  margin: 0.7rem 0 0;
+}
+.lede {
+  font-size: 1.05rem;
+  max-width: 28rem;
+  margin: 1.15rem auto 0;
+  color: #e6d8b4;
+  font-weight: 400;
+}
+.date-line {
+  margin: 0.55rem 0 0;
+  color: var(--gold-soft);
+  letter-spacing: 0.08em;
+  font-size: 0.92rem;
+}
+
+main {
+  width: min(1080px, calc(100% - 2rem));
+  margin: 0 auto 4rem;
+  padding-top: 0.5rem;
+}
+.section {
+  margin: 2.75rem 0 3.25rem;
+}
+.section-head {
+  text-align: center;
+  margin: 0 0 1.4rem;
+}
+.section-head h2 {
+  font-family: Fraunces, Georgia, Palatino, serif;
+  font-weight: 500;
+  font-style: italic;
+  font-size: clamp(1.55rem, 3vw, 2.05rem);
+  margin: 0;
+  color: var(--sky);
+}
+.section-head h2::before,
+.section-head h2::after {
+  content: "✦";
+  font-style: normal;
+  font-size: 0.45em;
+  color: var(--gold);
+  vertical-align: middle;
+  margin: 0 0.7em;
+  letter-spacing: 0;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.35rem 1.2rem;
+}
+@media (min-width: 720px) {
+  .gallery { grid-template-columns: 1fr 1fr; }
+  .card.wide { grid-column: 1 / -1; }
+}
+.card {
+  margin: 0;
+  background: transparent;
+}
+.card button.shot {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: var(--paper);
+  cursor: zoom-in;
+  border-radius: 6px;
+  box-shadow: var(--shadow);
+  padding: 0.55rem 0.55rem 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card button.shot:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(21, 34, 56, 0.18);
+}
+.card button.shot:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+.card img,
+.card video {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  background: var(--paper);
+  border-radius: 2px;
+}
+@media (min-width: 720px) {
+  .card:not(.wide) img {
+    max-height: 82vh;
+  }
+}
+.card figcaption {
+  font-family: Fraunces, Georgia, Palatino, serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.05rem;
+  color: var(--muted);
+  text-align: center;
+  padding: 0.7rem 0.4rem 0.15rem;
+}
+.video-card .video-wrap {
+  background: var(--paper);
+  border-radius: 6px;
+  box-shadow: var(--shadow);
+  padding: 0.55rem 0.55rem 0;
+}
+.video-card video {
+  background: var(--navy);
+  width: 100%;
+  max-height: 82vh;
+}
+.video-placeholder {
+  position: relative;
+  display: block;
+  margin: 0;
+}
+.video-placeholder img {
+  width: 100%;
+  height: auto;
+  max-height: 82vh;
+  object-fit: contain;
+  display: block;
+  background: var(--navy);
+  border-radius: 2px;
+}
+.video-note {
+  display: block;
+  font-family: "Source Sans 3", "Segoe UI", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.92rem;
+  color: var(--muted);
+  margin-top: 0.25rem;
+}
+.play-badge {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: rgba(15, 23, 38, 0.62);
+  border: 2px solid var(--gold-soft);
+  pointer-events: none;
+}
+.play-badge::after {
+  content: "";
+  position: absolute;
+  left: 27px;
+  top: 22px;
+  border-style: solid;
+  border-width: 13px 0 13px 22px;
+  border-color: transparent transparent transparent var(--gold-soft);
+}
+
+.site-footer {
+  text-align: center;
+  padding: 1rem 1.25rem 3rem;
+  color: var(--muted);
+  font-family: Fraunces, Georgia, Palatino, serif;
+  font-style: italic;
+  font-size: 1rem;
+}
+.site-footer .rule {
+  width: 4.5rem;
+  height: 1px;
+  background: var(--rule);
+  margin: 0 auto 1rem;
+}
+
+/* Lightbox */
+.lb {
+  position: fixed;
+  inset: 0;
+  background: #0c121c;
+  display: none;
+  z-index: 9999;
+  color: var(--cream);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0;
+}
+.lb.open { display: flex; }
+.lb img {
+  max-width: min(100vw - 2rem, 1400px);
+  max-height: calc(100vh - 5.5rem);
+  object-fit: contain;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.45);
+}
+.lb-caption {
+  font-family: Fraunces, Georgia, Palatino, serif;
+  font-style: italic;
+  margin: 0.6rem 3.5rem 0.8rem;
+  padding: 0.35rem 0.8rem;
+  text-align: center;
+  color: var(--gold-soft);
+  font-size: 1.05rem;
+  max-width: 36rem;
+  width: calc(100% - 7rem);
+}
+.lb-btn {
+  position: absolute;
+  appearance: none;
+  border: 0;
+  background: rgba(255,255,255,0.08);
+  color: var(--cream);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+.lb-btn:hover, .lb-btn:focus-visible {
+  background: rgba(212, 164, 74, 0.3);
+  outline: 2px solid var(--gold);
+}
+.lb-close { top: 0.7rem; right: 0.7rem; font-size: 1.8rem; }
+.lb-prev { left: 0.6rem; top: 50%; transform: translateY(-50%); }
+.lb-next { right: 0.6rem; top: 50%; transform: translateY(-50%); }
+body.lb-lock { overflow: hidden; }
+
+@media (max-width: 719px) {
+  .site-header { padding-bottom: 2.6rem; }
+  .lb-prev, .lb-next { top: auto; bottom: 0.7rem; transform: none; }
+  .lb img { max-height: calc(100vh - 8rem); }
+  .card button.shot { padding: 0.4rem 0.4rem 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .card button.shot { transition: none; }
+}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <span class="moon" aria-hidden="true"></span>
+    <div class="festoon" aria-hidden="true">
+      <i style="left:6%"></i><i style="left:15%"></i><i style="left:24%"></i>
+      <i style="left:33%"></i><i style="left:42%"></i><i style="left:51%"></i>
+      <i style="left:60%"></i><i style="left:69%"></i><i style="left:78%"></i>
+      <i style="left:87%"></i><i style="left:95%"></i>
+    </div>
+    <p class="brand-kicker">A keepsake</p>
+    <h1 class="brand-title">Declan &amp; Kate's <em>18th</em></h1>
+    <p class="brand-sub">Paddock Party</p>
+    <p class="lede">A night in the paddock, kept here.</p>
+    
+  </header>
+
+  <main>
+    <section class="section" id="section-arriving">
+      <header class="section-head"><h2>Arriving</h2></header>
+      <div class="gallery">
+    <figure class="card wide">
+      <button type="button" class="shot" data-slide="0" aria-label="View: A &#x27;PARKING / CAMPING&#x27; sign on a hay bale, in front of the house">
+        <img src="img/01-parking-by-the-house.jpg" alt="A hand-painted PARKING / CAMPING sign with an arrow, on a round hay bale in front of a farmhouse, photographed through a car window" width="1600" height="1200" loading="lazy">
+      </button>
+      <figcaption>A &#x27;PARKING / CAMPING&#x27; sign on a hay bale, in front of the house</figcaption>
+    </figure>
+    <figure class="card wide">
+      <button type="button" class="shot" data-slide="1" aria-label="View: A &#x27;PARKING / CAMPING&#x27; sign, and a line of bales across the paddock">
+        <img src="img/02-parking-across-the-paddock.jpg" alt="A hand-painted PARKING / CAMPING sign on a round hay bale, with a line of bales stretching across a paddock" width="1600" height="1200" loading="lazy">
+      </button>
+      <figcaption>A &#x27;PARKING / CAMPING&#x27; sign, and a line of bales across the paddock</figcaption>
+    </figure>
+    <figure class="card">
+      <button type="button" class="shot" data-slide="2" aria-label="View: The windmill, the tank, and a swag">
+        <img src="img/03-windmill.jpg" alt="A windmill and water tank in a paddock, with a swag by the fence under a cloudy sky" width="1200" height="1600" loading="lazy">
+      </button>
+      <figcaption>The windmill, the tank, and a swag</figcaption>
+    </figure>
+      </div>
+    </section>
+    <section class="section" id="section-paddock">
+      <header class="section-head"><h2>In the paddock</h2></header>
+      <div class="gallery">
+    <figure class="card">
+      <button type="button" class="shot" data-slide="3" aria-label="View: A kick of the ball by the tractor">
+        <img src="img/04-tractor.jpg" alt="Two children and a ball on dry grass beside a blue tractor and a round hay bale" width="1200" height="1600" loading="lazy">
+      </button>
+      <figcaption>A kick of the ball by the tractor</figcaption>
+    </figure>
+    <figure class="card wide">
+      <button type="button" class="shot" data-slide="4" aria-label="View: Totem tennis by the truck">
+        <img src="img/05-totem-tennis-truck.jpg" alt="Two children playing totem tennis on the grass, with a white truck behind them" width="1600" height="1200" loading="lazy">
+      </button>
+      <figcaption>Totem tennis by the truck</figcaption>
+    </figure>
+    <figure class="card wide">
+      <button type="button" class="shot" data-slide="5" aria-label="View: Totem tennis by the tractor">
+        <img src="img/06-totem-tennis-tractor.jpg" alt="Two children playing totem tennis beside a blue tractor and a row of hay bales" width="1600" height="1200" loading="lazy">
+      </button>
+      <figcaption>Totem tennis by the tractor</figcaption>
+    </figure>
+    <figure class="card wide">
+      <button type="button" class="shot" data-slide="6" aria-label="View: A swing at totem tennis">
+        <img src="img/07-totem-tennis-swing.jpg" alt="A child swinging at totem tennis beside a blue tractor and hay bales" width="1600" height="1200" loading="lazy">
+      </button>
+      <figcaption>A swing at totem tennis</figcaption>
+    </figure>
+    <figure class="card wide">
+      <button type="button" class="shot" data-slide="7" aria-label="View: A young man in a checked shirt and a woman in pink">
+        <img src="img/08-checked-and-pink.jpg" alt="A young man in a checked shirt standing with a woman in a pink shirt and a hat, beside a shed" width="1600" height="1200" loading="lazy">
+      </button>
+      <figcaption>A young man in a checked shirt and a woman in pink</figcaption>
+    </figure>
+    <figure class="card">
+      <button type="button" class="shot" data-slide="8" aria-label="View: By the old tree">
+        <img src="img/09-by-the-tree.jpg" alt="A girl in a sheepskin vest standing beside a weathered tree" width="1145" height="1600" loading="lazy">
+      </button>
+      <figcaption>By the old tree</figcaption>
+    </figure>
+      </div>
+    </section>
+    <section class="section" id="section-bales">
+      <header class="section-head"><h2>Up on the bales</h2></header>
+      <div class="gallery">
+    <figure class="card">
+      <button type="button" class="shot" data-slide="9" aria-label="View: Climbing the bales">
+        <img src="img/10-climbing-bales.jpg" alt="Three children climbing a row of round hay bales beside a corrugated-iron shed" width="1200" height="1600" loading="lazy">
+      </button>
+      <figcaption>Climbing the bales</figcaption>
+    </figure>
+    <figure class="card wide">
+      <button type="button" class="shot" data-slide="10" aria-label="View: Arms up on the bales">
+        <img src="img/11-arms-up.jpg" alt="Three children standing on round hay bales with their arms raised" width="1600" height="1200" loading="lazy">
+      </button>
+      <figcaption>Arms up on the bales</figcaption>
+    </figure>
+      </div>
+    </section>
+    <section class="section" id="section-sunset">
+      <header class="section-head"><h2>At sunset</h2></header>
+      <div class="gallery">
+    <figure class="card wide">
+      <button type="button" class="shot" data-slide="11" aria-label="View: A family at sunset">
+        <img src="img/12-family-sunset.jpg" alt="A family selfie at sunset: a man in a white hat, a woman in a black hat, and two children" width="1600" height="1200" loading="lazy">
+      </button>
+      <figcaption>A family at sunset</figcaption>
+    </figure>
+    <figure class="card">
+      <button type="button" class="shot" data-slide="12" aria-label="View: A hug in front of the marquee">
+        <img src="img/13-hug-marquee.jpg" alt="A girl hugging a boy in front of a white marquee at sunset" width="1200" height="1600" loading="lazy">
+      </button>
+      <figcaption>A hug in front of the marquee</figcaption>
+    </figure>
+    <figure class="card">
+      <button type="button" class="shot" data-slide="13" aria-label="View: Walking over to the marquee">
+        <img src="img/14-kids-to-marquee.jpg" alt="Two children walking toward a white marquee at sunset" width="1200" height="1600" loading="lazy">
+      </button>
+      <figcaption>Walking over to the marquee</figcaption>
+    </figure>
+    <figure class="card">
+      <button type="button" class="shot" data-slide="14" aria-label="View: Heading to the marquee at sunset">
+        <img src="img/15-heading-to-marquee.jpg" alt="Two men walking toward a white marquee at sunset" width="1200" height="1600" loading="lazy">
+      </button>
+      <figcaption>Heading to the marquee at sunset</figcaption>
+    </figure>
+      </div>
+    </section>
+    <section class="section" id="section-shed">
+      <header class="section-head"><h2>Around the shed</h2></header>
+      <div class="gallery">
+    <figure class="card">
+      <button type="button" class="shot" data-slide="15" aria-label="View: A yarn by the baler">
+        <img src="img/16-shed-baler.jpg" alt="Three men talking beside wine barrels and a red New Holland baler in a shed" width="1200" height="1600" loading="lazy">
+      </button>
+      <figcaption>A yarn by the baler</figcaption>
+    </figure>
+      </div>
+    </section>
+    <section class="section" id="section-bull">
+      <header class="section-head"><h2>Riding the bull</h2></header>
+      <div class="gallery">
+    <figure class="card wide">
+      <button type="button" class="shot" data-slide="16" aria-label="View: In the arena">
+        <img src="img/17-bull-arena.jpg" alt="People standing in an inflatable mechanical bull arena under festoon lights in a shed" width="1600" height="1200" loading="lazy">
+      </button>
+      <figcaption>In the arena</figcaption>
+    </figure>
+    <figure class="card">
+      <button type="button" class="shot" data-slide="17" aria-label="View: Riding the bull">
+        <img src="img/18-riding-the-bull.jpg" alt="A young man in a checked shirt riding an inflatable mechanical bull" width="1200" height="1600" loading="lazy">
+      </button>
+      <figcaption>Riding the bull</figcaption>
+    </figure>
+    <figure class="card">
+      <button type="button" class="shot" data-slide="18" aria-label="View: Holding on">
+        <img src="img/19-holding-on.jpg" alt="A close view of a young man in a checked shirt riding the mechanical bull" width="1200" height="1600" loading="lazy">
+      </button>
+      <figcaption>Holding on</figcaption>
+    </figure>
+    <figure class="card">
+      <button type="button" class="shot" data-slide="19" aria-label="View: A go on the bull">
+        <img src="img/20-a-go-on-the-bull.jpg" alt="A man riding the mechanical bull while someone works a yellow control box" width="1200" height="1600" loading="lazy">
+      </button>
+      <figcaption>A go on the bull</figcaption>
+    </figure>
+    <figure class="card">
+      <button type="button" class="shot" data-slide="20" aria-label="View: At the controls">
+        <img src="img/21-at-the-controls.jpg" alt="A man at the mechanical bull while another works the yellow control box" width="1200" height="1600" loading="lazy">
+      </button>
+      <figcaption>At the controls</figcaption>
+    </figure>
+    <figure class="card wide video-card">
+      <div class="video-wrap">
+        <video controls playsinline muted preload="metadata" poster="img/video-poster.jpg" width="1024" height="576">
+          <source src="video/party.mp4" type="video/mp4">
+        </video>
+      </div>
+      <figcaption>From the night</figcaption>
+    </figure>
+      </div>
+    </section>
+    <section class="section" id="section-buckers">
+      <header class="section-head"><h2>The Best Buckers</h2></header>
+      <div class="gallery">
+    <figure class="card">
+      <button type="button" class="shot" data-slide="21" aria-label="View: The Best Buckers — 1st Jack 55, 2nd Cameron 49, 3rd Bella 43">
+        <img src="img/22-best-buckers.jpg" alt="A whiteboard titled The Best Buckers, listing 1st Jack 55, 2nd Cameron 49, and 3rd Bella 43" width="1200" height="1600" loading="lazy">
+      </button>
+      <figcaption>The Best Buckers — 1st Jack 55, 2nd Cameron 49, 3rd Bella 43</figcaption>
+    </figure>
+      </div>
+    </section>
+    <section class="section" id="section-marquee">
+      <header class="section-head"><h2>Under the marquee</h2></header>
+      <div class="gallery">
+    <figure class="card wide">
+      <button type="button" class="shot" data-slide="22" aria-label="View: Gathered at the tables">
+        <img src="img/23-under-the-marquee.jpg" alt="People eating and talking at tables under a yellow-lit marquee, with barrels and a line of photos" width="1600" height="1200" loading="lazy">
+      </button>
+      <figcaption>Gathered at the tables</figcaption>
+    </figure>
+    <figure class="card">
+      <button type="button" class="shot" data-slide="23" aria-label="View: A family in the tent">
+        <img src="img/24-family-in-the-tent.jpg" alt="Four people standing together for a photograph inside a tent" width="1200" height="1600" loading="lazy">
+      </button>
+      <figcaption>A family in the tent</figcaption>
+    </figure>
+    <figure class="card">
+      <button type="button" class="shot" data-slide="24" aria-label="View: A woman in a hat and a boy, in the tent">
+        <img src="img/25-woman-and-boy-in-the-tent.jpg" alt="A smiling woman in a dark hat beside a boy sitting on a white chair inside a tent" width="1200" height="1600" loading="lazy">
+      </button>
+      <figcaption>A woman in a hat and a boy, in the tent</figcaption>
+    </figure>
+      </div>
+    </section>
+    <section class="section" id="section-dance">
+      <header class="section-head"><h2>On the dance floor</h2></header>
+      <div class="gallery">
+    <figure class="card wide">
+      <button type="button" class="shot" data-slide="25" aria-label="View: On the dance floor">
+        <img src="img/26-dance-floor-blue.jpg" alt="People dancing in a tent under blue lights, some wearing hats" width="1600" height="1200" loading="lazy">
+      </button>
+      <figcaption>On the dance floor</figcaption>
+    </figure>
+    <figure class="card wide">
+      <button type="button" class="shot" data-slide="26" aria-label="View: Under the disco lights">
+        <img src="img/27-dance-floor-lights.jpg" alt="People dancing in a tent under coloured lights, with a rainbow of light on the grass" width="1600" height="1200" loading="lazy">
+      </button>
+      <figcaption>Under the disco lights</figcaption>
+    </figure>
+    <figure class="card wide">
+      <button type="button" class="shot" data-slide="27" aria-label="View: Pink light on the dance floor">
+        <img src="img/28-dance-floor-pink.jpg" alt="People dancing in a tent under pink and purple lights, arms raised" width="1600" height="1200" loading="lazy">
+      </button>
+      <figcaption>Pink light on the dance floor</figcaption>
+    </figure>
+      </div>
+    </section>
+    <section class="section" id="section-afterdark">
+      <header class="section-head"><h2>After dark</h2></header>
+      <div class="gallery">
+    <figure class="card">
+      <button type="button" class="shot" data-slide="28" aria-label="View: The moon through the clouds">
+        <img src="img/29-moon-through-the-clouds.jpg" alt="A bright moon shining through clouds above the dark silhouette of trees" width="1200" height="1600" loading="lazy">
+      </button>
+      <figcaption>The moon through the clouds</figcaption>
+    </figure>
+    <figure class="card">
+      <button type="button" class="shot" data-slide="29" aria-label="View: Under the moon">
+        <img src="img/30-under-the-moon.jpg" alt="Three children on hay bales at night under a moonlit cloudy sky, one holding a torch" width="1200" height="1600" loading="lazy">
+      </button>
+      <figcaption>Under the moon</figcaption>
+    </figure>
+    <figure class="card">
+      <button type="button" class="shot" data-slide="30" aria-label="View: A moonbeam over the bales">
+        <img src="img/31-moonbeam.jpg" alt="Children on hay bales at night under a bright moon and a gum tree" width="1200" height="1600" loading="lazy">
+      </button>
+      <figcaption>A moonbeam over the bales</figcaption>
+    </figure>
+    <figure class="card">
+      <button type="button" class="shot" data-slide="31" aria-label="View: On the bales by moonlight">
+        <img src="img/32-on-the-bales-by-moonlight.jpg" alt="Three children on round hay bales at night under a moon and a large tree" width="1200" height="1600" loading="lazy">
+      </button>
+      <figcaption>On the bales by moonlight</figcaption>
+    </figure>
+    <figure class="card">
+      <button type="button" class="shot" data-slide="32" aria-label="View: Across the bales, under the moon">
+        <img src="img/33-across-the-bales.jpg" alt="Children on hay bales at night under a cloudy moonlit sky and a large tree" width="1200" height="1600" loading="lazy">
+      </button>
+      <figcaption>Across the bales, under the moon</figcaption>
+    </figure>
+    <figure class="card">
+      <button type="button" class="shot" data-slide="33" aria-label="View: Under the gum, after dark">
+        <img src="img/34-under-the-gum.jpg" alt="Children on a row of hay bales under a large floodlit gum tree at night, with a barrel, stools and a tractor" width="1200" height="1600" loading="lazy">
+      </button>
+      <figcaption>Under the gum, after dark</figcaption>
+    </figure>
+    <figure class="card">
+      <button type="button" class="shot" data-slide="34" aria-label="View: On the bales after dark">
+        <img src="img/35-bales-after-dark.jpg" alt="People on a row of round hay bales at night under a floodlit tree, with a barrel and stools in the foreground" width="1200" height="1600" loading="lazy">
+      </button>
+      <figcaption>On the bales after dark</figcaption>
+    </figure>
+    <figure class="card">
+      <button type="button" class="shot" data-slide="35" aria-label="View: The shed at night">
+        <img src="img/36-shed-at-night.jpg" alt="A corrugated-iron shed lit by a bright floodlight at night, with vehicles in the background" width="1200" height="1600" loading="lazy">
+      </button>
+      <figcaption>The shed at night</figcaption>
+    </figure>
+    <figure class="card">
+      <button type="button" class="shot" data-slide="36" aria-label="View: The marquee across the paddock">
+        <img src="img/37-marquee-across-the-paddock.jpg" alt="A floodlit paddock at night with a glowing marquee in the distance, hay bales and a large tree in the foreground" width="1200" height="1600" loading="lazy">
+      </button>
+      <figcaption>The marquee across the paddock</figcaption>
+    </figure>
+    <figure class="card">
+      <button type="button" class="shot" data-slide="37" aria-label="View: A man in a white hat">
+        <img src="img/38-man-in-a-white-hat.jpg" alt="A smiling man in a cream hat and a checked shirt, photographed at night" width="1200" height="1600" loading="lazy">
+      </button>
+      <figcaption>A man in a white hat</figcaption>
+    </figure>
+      </div>
+    </section>
+    <section class="section" id="section-lightsout">
+      <header class="section-head"><h2>Lights out</h2></header>
+      <div class="gallery">
+    <figure class="card">
+      <button type="button" class="shot" data-slide="38" aria-label="View: A man in a hat, on a picnic rug">
+        <img src="img/39-picnic-rug.jpg" alt="A man in a cream cowboy hat and checked shirt lying on a tartan picnic rug on the grass at night, lit by a torch" width="1200" height="1600" loading="lazy">
+      </button>
+      <figcaption>A man in a hat, on a picnic rug</figcaption>
+    </figure>
+    <figure class="card">
+      <button type="button" class="shot" data-slide="39" aria-label="View: The open boot, under the moon">
+        <img src="img/40-suv-under-the-moon.jpg" alt="An open SUV and an open car door at night, under a bright moon and clouds" width="1200" height="1600" loading="lazy">
+      </button>
+      <figcaption>The open boot, under the moon</figcaption>
+    </figure>
+    <figure class="card">
+      <button type="button" class="shot" data-slide="40" aria-label="View: A white wagon, boot open">
+        <img src="img/41-white-wagon.jpg" alt="A white station wagon parked on grass at night with its rear door open" width="1200" height="1600" loading="lazy">
+      </button>
+      <figcaption>A white wagon, boot open</figcaption>
+    </figure>
+    <figure class="card">
+      <button type="button" class="shot" data-slide="41" aria-label="View: Through the wagon window">
+        <img src="img/42-through-the-wagon-window.jpg" alt="A child lying in the back of a white car at night, looking at a tablet through the side window" width="1200" height="1600" loading="lazy">
+      </button>
+      <figcaption>Through the wagon window</figcaption>
+    </figure>
+    <figure class="card">
+      <button type="button" class="shot" data-slide="42" aria-label="View: In the back of the wagon">
+        <img src="img/43-in-the-white-wagon.jpg" alt="A boy looking out from the open boot of a white wagon at night" width="1200" height="1600" loading="lazy">
+      </button>
+      <figcaption>In the back of the wagon</figcaption>
+    </figure>
+    <figure class="card">
+      <button type="button" class="shot" data-slide="43" aria-label="View: Tucked in the wagon">
+        <img src="img/44-tucked-in-the-wagon.jpg" alt="A child in the open boot of a wagon at night, in a made-up bed, looking at a tablet" width="1200" height="1600" loading="lazy">
+      </button>
+      <figcaption>Tucked in the wagon</figcaption>
+    </figure>
+    <figure class="card">
+      <button type="button" class="shot" data-slide="44" aria-label="View: In the boot of the blue SUV">
+        <img src="img/45-in-the-blue-suv.jpg" alt="A child in pyjamas sitting in the open boot of a blue SUV in a paddock at night" width="1200" height="1600" loading="lazy">
+      </button>
+      <figcaption>In the boot of the blue SUV</figcaption>
+    </figure>
+    <figure class="card">
+      <button type="button" class="shot" data-slide="45" aria-label="View: Peeking from the duvet">
+        <img src="img/46-peeking-from-the-duvet.jpg" alt="A child peeking over a duvet in the open boot of a blue SUV at night" width="1200" height="1600" loading="lazy">
+      </button>
+      <figcaption>Peeking from the duvet</figcaption>
+    </figure>
+    <figure class="card">
+      <button type="button" class="shot" data-slide="46" aria-label="View: A peek from the SUV">
+        <img src="img/47-a-peek-from-the-suv.jpg" alt="A child peeking around the open boot of a blue SUV at night" width="1200" height="1600" loading="lazy">
+      </button>
+      <figcaption>A peek from the SUV</figcaption>
+    </figure>
+    <figure class="card">
+      <button type="button" class="shot" data-slide="47" aria-label="View: A bed in the back, under the clouds">
+        <img src="img/48-a-bed-in-the-suv.jpg" alt="A child lying in a made-up bed in an open car at night, under a cloudy sky, looking at a tablet" width="1200" height="1600" loading="lazy">
+      </button>
+      <figcaption>A bed in the back, under the clouds</figcaption>
+    </figure>
+    <figure class="card">
+      <button type="button" class="shot" data-slide="48" aria-label="View: Reading in the back">
+        <img src="img/49-reading-in-the-back.jpg" alt="A child sitting up in a bed made in an open car at night, looking at a lit screen, with clouds and stars behind" width="1200" height="1600" loading="lazy">
+      </button>
+      <figcaption>Reading in the back</figcaption>
+    </figure>
+    <figure class="card">
+      <button type="button" class="shot" data-slide="49" aria-label="View: Tucked up together">
+        <img src="img/50-tucked-up-together.jpg" alt="A woman and a child lying in a bed made up in a car at night, the child holding a tablet" width="1200" height="1599" loading="lazy">
+      </button>
+      <figcaption>Tucked up together</figcaption>
+    </figure>
+    <figure class="card">
+      <button type="button" class="shot" data-slide="50" aria-label="View: A story in the dark">
+        <img src="img/51-a-story-in-the-dark.jpg" alt="A child lying in bed in the dark, looking at a lit tablet" width="1200" height="1600" loading="lazy">
+      </button>
+      <figcaption>A story in the dark</figcaption>
+    </figure>
+    <figure class="card">
+      <button type="button" class="shot" data-slide="51" aria-label="View: Almost asleep">
+        <img src="img/52-almost-asleep.jpg" alt="A child in a bed made up in a car, looking at a tablet, with a stuffed toy on the covers" width="1200" height="1600" loading="lazy">
+      </button>
+      <figcaption>Almost asleep</figcaption>
+    </figure>
+    <figure class="card">
+      <button type="button" class="shot" data-slide="52" aria-label="View: Peace signs in the back">
+        <img src="img/53-peace-in-the-back.jpg" alt="A child in pyjamas sitting on a bed made up in a car, smiling and holding up two peace signs" width="1200" height="1600" loading="lazy">
+      </button>
+      <figcaption>Peace signs in the back</figcaption>
+    </figure>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="rule" aria-hidden="true"></div>
+    A keepsake of Declan and Kate's paddock party.
+  </footer>
+
+  <div class="lb" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Photograph">
+    <button class="lb-btn lb-close" type="button" aria-label="Close">&times;</button>
+    <button class="lb-btn lb-prev" type="button" aria-label="Previous photograph">&#8249;</button>
+    <img id="lb-image" alt="">
+    <button class="lb-btn lb-next" type="button" aria-label="Next photograph">&#8250;</button>
+    <p class="lb-caption" id="lb-caption"></p>
+  </div>
+
+  <script>
+  (function () {
+    const box = document.getElementById("lightbox");
+    const img = document.getElementById("lb-image");
+    const cap = document.getElementById("lb-caption");
+    const buttons = Array.from(document.querySelectorAll("[data-slide]"));
+    const SLIDES = buttons.map(function (btn) {
+      const pic = btn.querySelector("img");
+      const figure = btn.closest("figure");
+      const raw = figure ? figure.querySelector("figcaption") : null;
+      let caption = "";
+      if (raw) {
+        caption = Array.from(raw.childNodes).filter(function (n) {
+          return n.nodeType === 3;
+        }).map(function (n) { return n.textContent.trim(); }).join(" ").trim()
+          || raw.textContent.trim();
+      }
+      return { src: pic.getAttribute("src"), alt: pic.getAttribute("alt") || "", caption: caption };
+    });
+    let i = 0;
+    let startX = null;
+
+    function show(n) {
+      if (!SLIDES.length) return;
+      i = (n + SLIDES.length) % SLIDES.length;
+      const s = SLIDES[i];
+      img.src = s.src;
+      img.alt = s.alt || s.caption || "";
+      cap.textContent = s.caption || "";
+    }
+    function openAt(n) {
+      show(n);
+      box.hidden = false;
+      box.classList.add("open");
+      document.body.classList.add("lb-lock");
+      box.querySelector(".lb-close").focus();
+    }
+    function close() {
+      box.classList.remove("open");
+      box.hidden = true;
+      document.body.classList.remove("lb-lock");
+    }
+
+    document.querySelectorAll("[data-slide]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        openAt(parseInt(btn.getAttribute("data-slide"), 10));
+      });
+    });
+    box.querySelector(".lb-close").addEventListener("click", close);
+    box.querySelector(".lb-prev").addEventListener("click", function () { show(i - 1); });
+    box.querySelector(".lb-next").addEventListener("click", function () { show(i + 1); });
+    box.addEventListener("click", function (e) {
+      if (e.target === box) close();
+    });
+    document.addEventListener("keydown", function (e) {
+      if (!box.classList.contains("open")) return;
+      if (e.key === "Escape") close();
+      if (e.key === "ArrowLeft") show(i - 1);
+      if (e.key === "ArrowRight") show(i + 1);
+    });
+    box.addEventListener("touchstart", function (e) {
+      if (e.changedTouches[0]) startX = e.changedTouches[0].clientX;
+    }, { passive: true });
+    box.addEventListener("touchend", function (e) {
+      if (startX == null || !e.changedTouches[0]) return;
+      const dx = e.changedTouches[0].clientX - startX;
+      startX = null;
+      if (dx > 50) show(i - 1);
+      if (dx < -50) show(i + 1);
+    }, { passive: true });
+  })();
+  </script>
+</body>
+</html>

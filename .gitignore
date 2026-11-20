@@ -1,0 +1,8 @@
+src/
+shots/
+paddock-party-keepsake.html
+build.py
+template.html
+build-log.txt
+__pycache__/
+*.pyc
