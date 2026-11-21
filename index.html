@@ -427,6 +427,21 @@ main {
   margin: 0 auto 1rem;
 }
 
+.site-footer .book-link {
+  margin: 0;
+  font-size: 0.92rem;
+}
+.site-footer .book-link a {
+  color: var(--muted);
+  text-decoration: none;
+}
+.site-footer .book-link a:hover,
+.site-footer .book-link a:focus-visible {
+  color: var(--sky);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 /* Lightbox */
 .lb {
   position: fixed;
@@ -981,6 +996,7 @@ body.lb-lock { overflow: hidden; }
 
   <footer class="site-footer">
     <div class="rule" aria-hidden="true"></div>
+    <p class="book-link"><a href="book/">Photo book</a></p>
   </footer>
 
   <div class="lb" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Photograph">

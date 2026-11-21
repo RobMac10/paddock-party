@@ -6,3 +6,7 @@ template.html
 build-log.txt
 __pycache__/
 *.pyc
+ebook/.venv/
+ebook/previews/
+ebook/qr-website.png
+ebook/__pycache__/

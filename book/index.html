@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Declan &amp; Kate's 18th — Paddock Party</title>
+  <style>
+    @font-face {
+      font-family: 'Fraunces';
+      font-style: italic;
+      font-weight: 500;
+      font-display: swap;
+      src: url('../fonts/fraunces-italic-500-latin.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Source Sans 3';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url('../fonts/sourcesans3-normal-400-latin.woff2') format('woff2');
+    }
+    :root {
+      --navy: #0e1726;
+      --sky: #152238;
+      --gold: #d4a44a;
+      --gold-soft: #e8c87a;
+      --cream: #f7f1e4;
+      --muted: #c9b894;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      background: var(--navy);
+      color: var(--cream);
+      font-family: "Source Sans 3", "Segoe UI", "Helvetica Neue", sans-serif;
+    }
+    body {
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      padding: 0.7rem 1rem;
+      background: linear-gradient(180deg, #0c121c, var(--sky));
+      border-bottom: 1px solid rgba(232, 200, 122, 0.22);
+    }
+    header a {
+      color: var(--gold-soft);
+      text-decoration: none;
+      font-size: 0.88rem;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+    header a:hover, header a:focus-visible {
+      color: #fff;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    header .title {
+      font-family: Fraunces, Georgia, "Palatino Linotype", Palatino, "Times New Roman", serif;
+      font-style: italic;
+      font-weight: 500;
+      font-size: 0.98rem;
+      color: var(--cream);
+      text-align: center;
+      flex: 1 1 auto;
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .stage {
+      flex: 1 1 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.6rem 0.4rem 0.2rem;
+      position: relative;
+      min-height: 0;
+    }
+    .page-wrap {
+      width: min(100%, 1200px);
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      touch-action: pan-y;
+    }
+    .page-wrap img {
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: calc(100dvh - 7.2rem);
+      background: #1c2e4a;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.1rem;
+      padding: 0.55rem 1rem 1.15rem;
+    }
+    .nav button {
+      appearance: none;
+      border: 1px solid rgba(232, 200, 122, 0.35);
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--cream);
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      font-size: 1.55rem;
+      line-height: 1;
+      cursor: pointer;
+    }
+    .nav button:hover, .nav button:focus-visible {
+      border-color: var(--gold);
+      background: rgba(212, 164, 74, 0.22);
+      outline: none;
+    }
+    .nav button:disabled {
+      opacity: 0.3;
+      cursor: default;
+    }
+    .counter {
+      min-width: 5.5rem;
+      text-align: center;
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+      letter-spacing: 0.06em;
+      font-size: 0.9rem;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .page-wrap img { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="../">Photographs</a>
+    <span class="title">Declan &amp; Kate's 18th</span>
+    <a href="../ebook/Paddock-Party-18th.pdf" download>Download PDF</a>
+  </header>
+  <div class="stage">
+    <div class="page-wrap">
+      <img id="page" alt="Photo book page 1" width="1200" height="900">
+    </div>
+  </div>
+  <div class="nav">
+    <button type="button" id="prev" aria-label="Previous page">&#8249;</button>
+    <div class="counter" id="counter">1 / 51</div>
+    <button type="button" id="next" aria-label="Next page">&#8250;</button>
+  </div>
+  <script>
+  (function () {
+    const PAGES = ["001.jpg", "002.jpg", "003.jpg", "004.jpg", "005.jpg", "006.jpg", "007.jpg", "008.jpg", "009.jpg", "010.jpg", "011.jpg", "012.jpg", "013.jpg", "014.jpg", "015.jpg", "016.jpg", "017.jpg", "018.jpg", "019.jpg", "020.jpg", "021.jpg", "022.jpg", "023.jpg", "024.jpg", "025.jpg", "026.jpg", "027.jpg", "028.jpg", "029.jpg", "030.jpg", "031.jpg", "032.jpg", "033.jpg", "034.jpg", "035.jpg", "036.jpg", "037.jpg", "038.jpg", "039.jpg", "040.jpg", "041.jpg", "042.jpg", "043.jpg", "044.jpg", "045.jpg", "046.jpg", "047.jpg", "048.jpg", "049.jpg", "050.jpg", "051.jpg"];
+    const img = document.getElementById("page");
+    const prev = document.getElementById("prev");
+    const next = document.getElementById("next");
+    const counter = document.getElementById("counter");
+    let i = 0;
+    let startX = null;
+
+    function preload(n) {
+      if (n < 0 || n >= PAGES.length) return;
+      const el = new Image();
+      el.src = "pages/" + PAGES[n];
+    }
+    function show(n) {
+      i = Math.max(0, Math.min(PAGES.length - 1, n));
+      img.src = "pages/" + PAGES[i];
+      img.alt = "Photo book page " + (i + 1);
+      counter.textContent = (i + 1) + " / " + PAGES.length;
+      prev.disabled = i === 0;
+      next.disabled = i === PAGES.length - 1;
+      preload(i + 1);
+      preload(i - 1);
+    }
+    prev.addEventListener("click", function () { show(i - 1); });
+    next.addEventListener("click", function () { show(i + 1); });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowLeft") show(i - 1);
+      if (e.key === "ArrowRight") show(i + 1);
+      if (e.key === "Home") show(0);
+      if (e.key === "End") show(PAGES.length - 1);
+    });
+    const wrap = img.parentElement;
+    wrap.addEventListener("touchstart", function (e) {
+      if (e.changedTouches[0]) startX = e.changedTouches[0].clientX;
+    }, { passive: true });
+    wrap.addEventListener("touchend", function (e) {
+      if (startX == null || !e.changedTouches[0]) return;
+      const dx = e.changedTouches[0].clientX - startX;
+      startX = null;
+      if (dx > 50) show(i - 1);
+      if (dx < -50) show(i + 1);
+    }, { passive: true });
+    show(0);
+  })();
+  </script>
+</body>
+</html>
