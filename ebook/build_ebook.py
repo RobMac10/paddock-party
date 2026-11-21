@@ -67,7 +67,8 @@ RULE = (217, 201, 164)
 SHADOW = (200, 186, 160)
 
 STARS = ["01-18-together.jpg", "02-the-stars.jpg", "03-kate.jpg", "04-declan.jpg"]
-HIGHLIGHTS = ["79-family-under-the-marquee.jpg", "80-family-under-the-marquee-alt.jpg"]
+MORNING = ["80-asleep-in-the-back.jpg", "81-morning-through-the-window.jpg"]
+HIGHLIGHTS = ["82-family-under-the-marquee.jpg", "83-family-under-the-marquee-alt.jpg"]
 
 
 @dataclass
@@ -413,7 +414,7 @@ def make_qr() -> None:
 
 def build_pdf(photos: list[Photo]) -> int:
     by_name = {p.name: p for p in photos}
-    missing = [n for n in STARS + HIGHLIGHTS if n not in by_name]
+    missing = [n for n in STARS + MORNING + HIGHLIGHTS if n not in by_name]
     if missing:
         raise SystemExit(f"Missing expected photographs: {missing}")
 
@@ -442,7 +443,7 @@ def build_pdf(photos: list[Photo]) -> int:
         labels=("Kate", "Declan"),
     )
 
-    body = [p for p in photos if p.name not in STARS and p.name not in HIGHLIGHTS]
+    body = [p for p in photos if p.name not in STARS and p.name not in MORNING and p.name not in HIGHLIGHTS]
     i = 0
     while i < len(body):
         cur = body[i]
@@ -456,8 +457,14 @@ def build_pdf(photos: list[Photo]) -> int:
 
     place_pair(
         pdf,
-        by_name["79-family-under-the-marquee.jpg"],
-        by_name["80-family-under-the-marquee-alt.jpg"],
+        by_name["80-asleep-in-the-back.jpg"],
+        by_name["81-morning-through-the-window.jpg"],
+        heading="The morning after",
+    )
+    place_pair(
+        pdf,
+        by_name["82-family-under-the-marquee.jpg"],
+        by_name["83-family-under-the-marquee-alt.jpg"],
         gold=True,
         heading="Highlights",
     )
@@ -760,8 +767,7 @@ def write_flipbook(page_count: int) -> None:
 
 def main() -> None:
     photos = load_photos()
-    if len(photos) != 80:
-        print(f"Warning: expected 80 photographs, found {len(photos)}", file=sys.stderr)
+    print(f"Photographs: {len(photos)}")
     page_count = build_pdf(photos)
     # fpdf2 2.9: pages_count includes the pages just written.
     if not isinstance(page_count, int) or page_count < 2:
